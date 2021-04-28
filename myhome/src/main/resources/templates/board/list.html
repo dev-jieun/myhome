@@ -1,6 +1,6 @@
 <!doctype html>
 <html xmlns:th="http://www.thymeleaf.org">
-  <head th:replace="fragments/common :: head('Hello, Spring Boot!')">
+  <head th:replace="fragments/common :: head('board')">
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -26,10 +26,10 @@
         }
       }
     </style>
-    <link href="starter-template.css" rel="stylesheet">
+    <link href="starter-template.css" th:href="@{/starter-template.css}"rel="stylesheet">
   </head>
   <body>
-    <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top" th:replace="fragments/common :: menu('home')">
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top" th:replace="fragments/common :: menu('board')">
        <!--  <a class="navbar-brand" href="#">Spring Boot Tutorial</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -47,17 +47,9 @@
         </div> -->
       </nav>
       
-      <main role="main" class="container">
-      
-        <div class="starter-template">
-          <h1>Spring Boot Tutorial</h1>
-          <p class="lead">스프링 부트를 이용해 웹 페이지 제작 <br>
-          Spring Security, JPA 를 이용해 보안 설정과 데이터 다루기. </p>
+        <div class="container">
+          <h2>Board</h2>
         </div>
-      
-      </main>
-
-
     <!-- Optional JavaScript; choose one of the two! -->
 
     <!-- Option 1: Bootstrap Bundle with Popper -->
